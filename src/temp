@@ -1,0 +1,21 @@
+<table>
+<thead> {dayNames.map(data=><th>{data}</th>)}</thead>
+<tbody>
+  
+
+  {dayNames.map(days=><td>
+    {/* {console.log(monthDate[days])} */}
+    {monthDate!==undefined?monthDate[days].map(dates=>{if(dates==0){
+      return <tr className='emptyCell'>
+        &nbsp
+      </tr>
+    }
+    else{
+      return <tr>
+      {dates}
+    </tr>
+    }
+      }):<></>}
+  </td>)}
+</tbody>
+</table>
